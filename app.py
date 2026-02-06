@@ -12,7 +12,7 @@ st.set_page_config(
 st.sidebar.title(" Navegação")
 st.sidebar.markdown("Selecione as opções de análise")
 
-arquivo = r'C:\Users\gabri\OneDrive\DesenvolvimentodeSoftware2\JRA\Semana01\Sreamlit\aula01\estudovendas_2024_03.parquet'
+arquivo = "https://drive.google.com/file/d/1Ed9ZfyRHYTnidgectuCNdNjVqoV7AqJ7/view?usp=sharing"
 
 st.sidebar.markdown("---")
 st.sidebar.markdown(" **Autor:** Gabriel Barboza")
