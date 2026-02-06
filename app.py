@@ -12,7 +12,8 @@ st.set_page_config(
 st.sidebar.title(" Navegação")
 st.sidebar.markdown("Selecione as opções de análise")
 
-arquivo = "https://drive.google.com/file/d/1Ed9ZfyRHYTnidgectuCNdNjVqoV7AqJ7/view?usp=sharing"
+arquivo = "https://drive.google.com/uc?id=1Ed9ZfyRHYTnidgectuCNdNjVqoV7AqJ7"
+
 
 st.sidebar.markdown("---")
 st.sidebar.markdown(" **Autor:** Gabriel Barboza")
@@ -40,6 +41,10 @@ st.markdown("## 🔎 Análise Exploratória")
 
 if arquivo:
     df = pd.read_parquet(arquivo)
+    df["data"] = pd.to_datetime(df["data"], errors="coerce")
+
+# opcional: remover linhas quebradas
+    df = df.dropna(subset=["data"])
 
     st.success("Arquivo carregado com sucesso!")
 
